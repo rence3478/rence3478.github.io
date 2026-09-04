@@ -10,10 +10,11 @@
   EDIT ME BEFORE PUBLISHING:
   - Replace "Marisol Vance" throughout with your name.
   - Replace PRC License No. 0000000 with your actual PRC license number.
-  - Replace the three sample projects under #projects with your own work
-    (or keep the structure and swap in real DPWH item nos., quantities, and
-    PHP unit costs — these figures are illustrative, not sourced from an
-    actual DPWH price list).
+  - For each sample project: put your real estimate file (a scanned/exported
+    JPG or PNG of your BOQ/takeoff sheet) in assets/projects/, then update
+    that project's two <img src="..."> and <a href="...pdf"> paths to point
+    to it. Until you do, each project shows a placeholder "attach file" graphic.
+  - Update the ABC total next to each project to match your real file.
   - Update the title-block footer contact fields (email, phone, location, links).
   - These are placeholder job names — swap in your real project titles.
 -->
@@ -306,6 +307,44 @@
     width:130px; text-align:right; color:var(--rust); font-size:18px; font-weight:600;
   }
 
+  .doc-frame{
+    position:relative;
+    margin:22px 26px 4px;
+    padding:10px;
+    background:#fff;
+    border:1px dashed var(--grid-line);
+  }
+  .doc-frame .tag{
+    position:absolute; top:-10px; left:14px;
+    background:var(--paper-alt);
+    padding:0 8px;
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:0.04em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+  }
+  .doc-frame a{ display:block; }
+  .doc-frame img{
+    width:100%;
+    height:auto;
+    display:block;
+    border:1px solid var(--hair);
+  }
+  .doc-actions{
+    display:flex; justify-content:flex-end;
+    padding:16px 26px 24px;
+    font-family:var(--font-mono);
+    font-size:12.5px;
+  }
+  .doc-actions a.openlink{
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:1px;
+  }
+  .doc-actions a.openlink:hover{ color:var(--rust); border-color:var(--rust); }
+
   /* ---------- SKILLS (legend) ---------- */
   .legend{
     display:grid;
@@ -414,9 +453,18 @@
   </div>
   <div class="wrap hero-body">
     <div class="hero-eyebrow"><span class="sq"></span> COST ESTIMATING &amp; QUANTITY TAKEOFF</div>
-    <h1><span>LORENCE</span><span>APURA, RCE</span></h1>
+    <h1><span>MARISOL</span><span>VANCE, PE</span></h1>
     <p class="role">Civil engineer building bid-ready estimates for roadway, structural concrete,
       and underground utility work — from conceptual budgets through construction pricing.</p>
+
+    <div class="dimline" aria-hidden="true">
+      <svg viewBox="0 0 640 40">
+        <path class="rule" d="M0,20 L640,20 M0,10 L0,30 M640,10 L640,30" />
+        <text x="0" y="12">START</text>
+        <text x="560" y="12">BID DAY</text>
+        <text x="270" y="38">9 YEARS · 60+ ESTIMATES DELIVERED</text>
+      </svg>
+    </div>
   </div>
   <div class="sheetno">
     <strong>SHEET A-101</strong>
@@ -470,27 +518,14 @@
             <div><strong>Basis</strong> 60% Detailed Engineering Design</div>
           </div>
         </div>
-        <table class="takeoff">
-          <thead>
-            <tr><th>Item</th><th>Description</th><th>Qty</th><th>Unit</th><th>Unit Cost</th><th>Extended</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>100</td><td>Clearing &amp; grubbing</td><td>2.8</td><td>ha</td><td>₱95,000.00</td><td>₱266,000</td></tr>
-            <tr><td>102</td><td>Unclassified excavation, roadway</td><td>9,600</td><td>m³</td><td>₱320.00</td><td>₱3,072,000</td></tr>
-            <tr><td>200</td><td>Aggregate subbase course</td><td>4,800</td><td>m³</td><td>₱1,380.00</td><td>₱6,624,000</td></tr>
-            <tr><td>201</td><td>Aggregate base course</td><td>3,000</td><td>m³</td><td>₱1,580.00</td><td>₱4,740,000</td></tr>
-            <tr><td>310</td><td>Bituminous prime coat</td><td>7,200</td><td>m²</td><td>₱45.00</td><td>₱324,000</td></tr>
-            <tr><td>302</td><td>Asphalt concrete surface course, 50mm</td><td>7,200</td><td>m²</td><td>₱980.00</td><td>₱7,056,000</td></tr>
-            <tr><td>600</td><td>RCPC storm drain, 600mm dia.</td><td>380</td><td>m</td><td>₱6,850.00</td><td>₱2,603,000</td></tr>
-            <tr><td>900</td><td>Concrete curb &amp; gutter</td><td>1,700</td><td>m</td><td>₱1,250.00</td><td>₱2,125,000</td></tr>
-          </tbody>
-        </table>
-        <div class="bidsheet-totals">
-          <div class="line"><span>Direct cost</span><span>₱26,810,000</span></div>
-          <div class="line"><span>OCM (12%)</span><span>₱3,217,200</span></div>
-          <div class="line"><span>Contractor's profit (8%)</span><span>₱2,144,800</span></div>
-          <div class="line"><span>VAT (5%)</span><span>₱1,608,600</span></div>
-          <div class="total"><span>Approved Budget (ABC)</span><span>₱33,780,600</span></div>
+        <div class="doc-frame">
+          <span class="tag">Exhibit — Quantity Takeoff &amp; ABC Summary</span>
+          <a href="assets/projects/project-1-abc.jpg" target="_blank" rel="noopener">
+            <img src="estimate.png" alt="Quantity takeoff and ABC summary for the Talamban–Cabancalan barangay road and drainage improvement">
+          </a>
+        </div>
+        <div class="doc-actions">
+          <a class="openlink" href="assets/projects/project-1-abc.pdf" target="_blank" rel="noopener">Open full estimate (PDF)</a>
         </div>
       </article>
 
@@ -505,25 +540,14 @@
             <div><strong>Basis</strong> 100% structural drawings</div>
           </div>
         </div>
-        <table class="takeoff">
-          <thead>
-            <tr><th>Item</th><th>Description</th><th>Qty</th><th>Unit</th><th>Unit Cost</th><th>Extended</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>404</td><td>Structural concrete, 21 MPa, foundations</td><td>850</td><td>m³</td><td>₱6,500.00</td><td>₱5,525,000</td></tr>
-            <tr><td>405</td><td>Structural concrete, 28 MPa, elevated decks</td><td>1,950</td><td>m³</td><td>₱7,100.00</td><td>₱13,845,000</td></tr>
-            <tr><td>404a</td><td>Reinforcing steel bars, Grade 60</td><td>285,000</td><td>kg</td><td>₱72.00</td><td>₱20,520,000</td></tr>
-            <tr><td>405a</td><td>Post-tensioning tendons</td><td>11,500</td><td>m</td><td>₱420.00</td><td>₱4,830,000</td></tr>
-            <tr><td>403</td><td>Formwork, elevated slabs</td><td>15,600</td><td>m²</td><td>₱850.00</td><td>₱13,260,000</td></tr>
-            <tr><td>406</td><td>Concrete sealer &amp; finishing</td><td>19,500</td><td>m²</td><td>₱145.00</td><td>₱2,827,500</td></tr>
-          </tbody>
-        </table>
-        <div class="bidsheet-totals">
-          <div class="line"><span>Direct cost</span><span>₱60,807,500</span></div>
-          <div class="line"><span>OCM (10%)</span><span>₱6,080,750</span></div>
-          <div class="line"><span>Contractor's profit (8%)</span><span>₱4,864,600</span></div>
-          <div class="line"><span>VAT (5%)</span><span>₱3,587,643</span></div>
-          <div class="total"><span>Approved Budget (ABC)</span><span>₱75,340,493</span></div>
+        <div class="doc-frame">
+          <span class="tag">Exhibit — Quantity Takeoff &amp; ABC Summary</span>
+          <a href="assets/projects/project-2-abc.jpg" target="_blank" rel="noopener">
+            <img src="assets/projects/placeholder.svg" alt="Quantity takeoff and ABC summary for the IT Park mixed-use building concrete package">
+          </a>
+        </div>
+        <div class="doc-actions">
+          <a class="openlink" href="assets/projects/project-2-abc.pdf" target="_blank" rel="noopener">Open full estimate (PDF)</a>
         </div>
       </article>
 
@@ -538,25 +562,14 @@
             <div><strong>Basis</strong> Issued-for-construction set</div>
           </div>
         </div>
-        <table class="takeoff">
-          <thead>
-            <tr><th>Item</th><th>Description</th><th>Qty</th><th>Unit</th><th>Unit Cost</th><th>Extended</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>1001</td><td>300mm dia. uPVC pipe, Series 1000</td><td>1,850</td><td>m</td><td>₱3,850.00</td><td>₱7,122,500</td></tr>
-            <tr><td>1002</td><td>Gate valves, 300mm</td><td>16</td><td>EA</td><td>₱42,000.00</td><td>₱672,000</td></tr>
-            <tr><td>1003</td><td>Fire hydrant assemblies</td><td>12</td><td>EA</td><td>₱58,000.00</td><td>₱696,000</td></tr>
-            <tr><td>102</td><td>Trench excavation &amp; backfill</td><td>1,850</td><td>m</td><td>₱620.00</td><td>₱1,147,000</td></tr>
-            <tr><td>311</td><td>Asphalt trench restoration</td><td>3,700</td><td>m²</td><td>₱1,050.00</td><td>₱3,885,000</td></tr>
-            <tr><td>1102</td><td>Traffic control &amp; safety provisions</td><td>1</td><td>LS</td><td>₱620,000.00</td><td>₱620,000</td></tr>
-          </tbody>
-        </table>
-        <div class="bidsheet-totals">
-          <div class="line"><span>Direct cost</span><span>₱14,142,500</span></div>
-          <div class="line"><span>OCM (15%)</span><span>₱2,121,375</span></div>
-          <div class="line"><span>Contractor's profit (8%)</span><span>₱1,131,400</span></div>
-          <div class="line"><span>VAT (5%)</span><span>₱869,764</span></div>
-          <div class="total"><span>Approved Budget (ABC)</span><span>₱18,265,039</span></div>
+        <div class="doc-frame">
+          <span class="tag">Exhibit — Quantity Takeoff &amp; ABC Summary</span>
+          <a href="assets/projects/project-3-abc.jpg" target="_blank" rel="noopener">
+            <img src="assets/projects/placeholder.svg" alt="Quantity takeoff and ABC summary for the Barangay Lahug water distribution line improvement">
+          </a>
+        </div>
+        <div class="doc-actions">
+          <a class="openlink" href="assets/projects/project-3-abc.pdf" target="_blank" rel="noopener">Open full estimate (PDF)</a>
         </div>
       </article>
 
